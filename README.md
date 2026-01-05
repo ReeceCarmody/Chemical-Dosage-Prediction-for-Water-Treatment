@@ -13,9 +13,9 @@ The goal of the project was to optimize these dosage amounts to both maintain wa
 - Assist the water treatment plant in their chemical dosage decision making process.
 
 ## Data
-As previously mentioned, the data was provided from a Colorado water treatment plant. Since this data is private it cannot be shared publicly.
+Since the data is provided from a Colorado water treatment plant only for the purpose of a class project, it is private. The raw data cannot be shared publicly.
 
-Roughly, there were multiple datasets that consisted of different water characteristics. These characteristics were periodically recorded and documented over time. A three year interval (2018-2020) was used due to the data being the most comprehensive during this time period.
+Overall, there were multiple datasets that consisted of different water characteristics. These characteristics were periodically recorded and documented over time. A three year interval (2018-2020) was used due to the data being the most comprehensive during this time period.
 
 The Ferric Chloride (FeCl) dose was predicted through four main water characteristics (pH, temperature, conductivity, and turbidity). The Cationic Polymer dose was another target variable, but due to its high correlation with the FeCl dose it was unnecessary to attempt prediction on this variable.
 
@@ -32,11 +32,11 @@ The Ferric Chloride (FeCl) dose was predicted through four main water characteri
   - A simple decision tree was created in an attempt to model this non-linear data.
   - The R squared, RMSE, and MAE all dictate this model has poor performance.
   - Shows that pH is the primary predictor being used to predict the dosage amounts.
-![name](visualizations/name.png)
+![Decision Tree](visualizations/STAT445_decision_tree.png)
   - A random forest was created to try and improve model performance.
   - Similar model performance is shown by the R squared, RMSE, and MAE values even with a random forest.
   - Feature importance plot shows pH and temperature being the main predictors (as well as their lag variables).
-![name](visualizations/name.png)
+![Random Forest Feature Importance](visualizations/STAT445_rf_feature_importance.png)
 - **Conclusion**
   - Predicting chemical dosage amounts with this data proved to be ineffective.
   - Poor data (limited dataset size, limited predictors) and the complexity of chemical dosage prediction likely attributed to poor model performance.
